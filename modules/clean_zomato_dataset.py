@@ -19,9 +19,9 @@ def clean_df(path):
    df['NAME'] = df['NAME'].str.title()
    df['COST'] = df['COST'].str.title()
    print('Saving clean file now...')
-   df.to_csv('datasets/Zomato_Mumbai_Dataset_clean.csv')
+   df.to_csv('data/Zomato_Mumbai_Dataset_clean.csv')
    return df
 
 if __name__ == '__main__':
-    print(clean_df('datasets/Zomato_Mumbai_Dataset.csv'))
+    clean_df('data/Zomato_Mumbai_Dataset.csv')
 
