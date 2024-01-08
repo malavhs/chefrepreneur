@@ -79,5 +79,5 @@ def text_to_image(text, prompt_input):
         ai generated image using DALL E 3 Model
     """
     chain = LLMChain(llm=models.llm, prompt=prompt_input)
-    image_url = DallEAPIWrapper().run(chain.run(f"{text}"))
+    image_url = DallEAPIWrapper(model='dall-e-3').run(chain.run(f"{text}"))
     return image_url
